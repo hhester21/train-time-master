@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Train Time</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Train Tracker -->
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron" style="background-color:teal; color: white">
+        <h1 class="text-center">Its Train Time</h1>
+        <h3 class="text-center">CHOO CHOO WOO WOO!!</h3>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+		<!-- Train list .panel -->
+		<div class="panel panel-primary">
+
+			<div class="panel-heading">Train List</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency (min)</th>
+							<th>Next Arrival</th>
+							<th>Minutes Away</th>
+						</tr>
+					</thead>
+					<tbody id="train-table"></tbody>
+				</table>
+				<button class="btn btn-primary" id="clear">Clear All</button>
+				<span id="currentTime"></span>
+			</div>
+		</div><!-- Close .panel -->
+
+		<!-- Train list .panel -->
+		<div class="panel panel-primary">
+			<div class="panel-heading">Add Train</div>
+			<div class="panel-body">
+
+				<form>
+					<div class="form-group">
+						<label>Train Name</label>
+						<input class="form-control" id="name" type="text">
+					</div>
+					<div class="form-group">
+						<label>Destination</label>
+						<input class="form-control" id="destination" type="text">
+					</div>
+					<div class="form-group">
+						<label>Time of First Train (HH:mm) (24 hr)</label>
+						<input class="form-control" id="time" type="text">
+					</div>
+					<div class="form-group">
+						<label>Frequency (min)</label>
+						<input class="form-control" id="frequency" type="text">
+					</div>
+					<button class="btn btn-primary" id="add">Submit</button>
+				</form>
+
+			</div>
+		</div><!-- Close .panel -->
+		
+	</div>
+    <!-- JavaScript -->
+    <script src="timesheetLogic.js"></script>
+<br>
+<footer>Haley Hester 2017</footer>
+  </body>
+
+</html>
